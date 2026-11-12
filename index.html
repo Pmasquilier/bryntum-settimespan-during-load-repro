@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>setTimeSpan right after a lazy-loaded reload throws</title>
+    <link rel="stylesheet" href="/node_modules/@bryntum/schedulerpro/schedulerpro.css">
+    <link rel="stylesheet" href="/node_modules/@bryntum/schedulerpro/material3-light.css">
+    <style>
+        body { margin: 0; font-family: sans-serif; display: flex; flex-direction: column; height: 100vh; }
+        header { padding: 8px 12px; border-bottom: 1px solid #ddd; display: flex; gap: 8px; align-items: center; }
+        #container { flex: 1; min-height: 0; }
+        #log { height: 170px; overflow: auto; margin: 0; padding: 8px 12px; background: #f6f6f6; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <header>
+        <button id="plain">Reload the rows, then setTimeSpan right after the load</button>
+        <button id="workaround">Same, after whenProjectReady</button>
+    </header>
+    <div id="container"></div>
+    <pre id="log"></pre>
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
